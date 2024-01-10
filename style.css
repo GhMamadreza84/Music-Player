@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: varela;
+  background: #23074f;
+  color: #fff;
+}
+
+@font-face {
+  font-family: "varela";
+  src: url("./assets/varela-round.ttf");
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button,
+input {
+  font-family: varela;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 0.6rem 0;
+  background: #24c4d3;
+}
+
+.header .header-title {
+  color: #fff;
+}
+
+/* MUSIC PLAYER STYLES */
+.music-player {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 575px) {
+  .music-player {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .music-player {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 963px) {
+  .music-player {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .music-player {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .music-player {
+    width: 35%;
+  }
+}
+/* cover image */
+.music-player .cover-wrapper {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(131, 7, 198, 0.5);
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.music-player .cover-wrapper .cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.music-player .cover-wrapper .cover-img.cover-animation {
+  animation: rotate-cover 4s linear infinite;
+}
+
+@keyframes rotate-cover {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/* music info (singer name & music name) */
+.music-player .music-info-wrapper {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.music-player .music-info-wrapper .singer-name {
+  margin-bottom: 0.5rem;
+}
+
+.music-player .music-info-wrapper .music-name {
+  color: #ccc;
+}
+
+/* control buttons */
+.music-player .control-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.music-player .control-buttons .control-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.7rem;
+  margin: 0 0.6rem;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.music-player .control-buttons #play-pause-btn {
+  font-size: 1.3rem;
+  background: #fff;
+  color: #23074f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .music-player .control-buttons .control-btn {
+    margin: 0 0.3rem;
+  }
+}
+
+/* TIME (CURRENT & TOTAL) */
+.music-player .time-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.music-player .time-wrapper .current-time {
+}
+
+.music-player .time-wrapper .total-time {
+}
+
+/* CONTROL SLIDERS */
+.music-player .control-sliders {
+  margin-top: 1rem;
+}
+
+.music-player .control-sliders .seek-slider,
+.music-player .control-sliders .volume-slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #ccc;
+  transition: all 0.2s;
+  display: block;
+  border-radius: 10px;
+}
+
+.music-player .control-sliders .seek-slider {
+  width: 100%;
+}
+
+.music-player .control-sliders .volume-slider {
+  width: 30%;
+  margin: 0 1rem;
+}
+.music-player .control-sliders .volume-slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Modify the appearance of the slider thumb */
+.music-player .control-sliders .seek-slider::-webkit-slider-thumb,
+.music-player .control-sliders .volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+/* effect in hover to sliders */
+.music-player .control-sliders .seek-slider:hover,
+.music-player .control-sliders .volume-slider:hover {
+  background: #fff;
+}
+
+.music-player .control-sliders .seek-slider::-webkit-slider-thumb:hover,
+.music-player .control-sliders .volume-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2.2rem;
+}
